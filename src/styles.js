@@ -104,6 +104,7 @@ export const Paragraph = styled.p`
 
 export const InputButtonWrapper = styled.form`
   display: flex;
+  position: relative;
   width: 100%;
   max-width: 380px;
   margin-bottom: 80px;
@@ -137,6 +138,25 @@ export const Button = styled.button`
   background-color: #fff;
   border: solid 2px #ffffff;
   padding: 0;
+`;
+
+export const Success = styled.span`
+  position: absolute;
+  top: 60px;
+  font-size: 12px;
+  display: block;
+  opacity: ${({ isSuccess }) => (isSuccess ? 1 : 0)};
+  transition: opacity 0.3s ease;
+`;
+export const Error = styled.span`
+  position: absolute;
+  top: 60px;
+  font-size: 12px;
+  display: block;
+  opacity: ${({ isError }) => (isError ? 1 : 0)};
+  transition: opacity 0.3s ease;
+  color: #fff;
+  line-height: 1;
 `;
 
 export const Footer = styled.div`

@@ -16,6 +16,8 @@ import {
   Button,
   Footer,
   SocialLink,
+  Success,
+  Error,
 } from '../styles';
 import Image from '../images/bg.jpg';
 import Logo from '../components/Logo';
@@ -24,15 +26,23 @@ import '../index.css';
 
 const IndexPage = () => {
   const [email, setEmail] = useState('');
+  const [requestSent, setSent] = useState(true);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(true);
 
   const handleSubmit = async event => {
     event.preventDefault();
+    setSent(false);
+    setSuccess(false);
+    setError(false);
     const uri =
       'https://triad-coming-soon.netlify.com/.netlify/functions/signup';
     const response = await axios.post(uri, {
       email,
     });
-    console.log(response);
+    setSent(true);
+    if (response.data.status === 'saved email') setSuccess(true);
+    if (response.data.status !== 'saved email') setError(false);
   };
 
   return (
@@ -62,6 +72,13 @@ const IndexPage = () => {
                 placeholder="Enter your email address"
               />
               <Button type="submit">NOTIFY ME</Button>
+              <Success isSuccess={requestSent && success}>
+                You will be notified, as soon as we launch our product line.
+              </Success>
+              <Error isError={requestSent && error}>
+                Something went wrong, please check your email address and try
+                again.
+              </Error>
             </InputButtonWrapper>
           </Content>
           <Footer>
