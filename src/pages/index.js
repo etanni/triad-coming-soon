@@ -31,7 +31,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO />
       <Background src={Image} alt="Background Image" />
       <Overlay />
       <PageWrapper>

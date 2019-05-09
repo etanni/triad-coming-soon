@@ -8,31 +8,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description, lang, meta, keywords, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  );
-
-  const metaDescription = description || site.siteMetadata.description;
+function SEO({ lang = 'en', meta }) {
+  const metaDescription =
+    'Triad is premium activewear fashion brand. It has the most advanced Tech on the market.';
+  const title = 'Triad is coming soon | Made to be free';
+  const keywords = [
+    'fashion',
+    'activewear',
+    'sport',
+    'lifestyle',
+    'stain-proof',
+    'athleisure',
+  ];
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title="Triad is coming soon | Made to be free"
+      title={title}
       meta={[
         {
           name: `description`,
@@ -56,7 +51,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: 'weartriad',
         },
         {
           name: `twitter:title`,
