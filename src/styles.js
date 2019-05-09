@@ -6,7 +6,7 @@ export const Layout = styled.div`
   flex-direction: column;
   min-height: 100vh;
   position: relative;
-  @media (min-width: 500px) {
+  @media (min-width: 600px) {
     min-height: unset;
     height: 100vh;
   }
@@ -81,7 +81,6 @@ export const Title = styled.h1`
   max-width: 550px;
   @media (min-width: 500px) {
     font-size: 43px;
-    /* font-weight: 700; */
     margin-bottom: 30px;
   }
 `;
@@ -138,6 +137,9 @@ export const Button = styled.button`
   background-color: #fff;
   border: solid 2px #ffffff;
   padding: 0;
+  @media (min-width: 500px) {
+    width: 135px;
+  }
 `;
 
 export const Success = styled.span`

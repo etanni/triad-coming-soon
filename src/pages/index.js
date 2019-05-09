@@ -70,11 +70,12 @@ const IndexPage = () => {
               />
               <Button type="submit">NOTIFY ME</Button>
               <Success isSuccess={success}>
-                You will be notified, as soon as we launch our product line.
+                Success! You will be notified, as soon as we launch our product
+                line.
               </Success>
               <Error isError={error}>
-                Something went wrong, please check your email address and try
-                again.
+                Error! Something went wrong, please check your email address and
+                try again.
               </Error>
             </InputButtonWrapper>
           </Content>
