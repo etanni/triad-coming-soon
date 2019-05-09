@@ -26,13 +26,11 @@ import '../index.css';
 
 const IndexPage = () => {
   const [email, setEmail] = useState('');
-  const [requestSent, setSent] = useState(true);
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(true);
+  const [error, setError] = useState(false);
 
   const handleSubmit = async event => {
     event.preventDefault();
-    setSent(false);
     setSuccess(false);
     setError(false);
     const uri =
@@ -40,7 +38,6 @@ const IndexPage = () => {
     const response = await axios.post(uri, {
       email,
     });
-    setSent(true);
     if (response.data.status === 'saved email') setSuccess(true);
     if (response.data.status !== 'saved email') setError(false);
   };
@@ -72,10 +69,10 @@ const IndexPage = () => {
                 placeholder="Enter your email address"
               />
               <Button type="submit">NOTIFY ME</Button>
-              <Success isSuccess={requestSent && success}>
+              <Success isSuccess={success}>
                 You will be notified, as soon as we launch our product line.
               </Success>
-              <Error isError={requestSent && error}>
+              <Error isError={error}>
                 Something went wrong, please check your email address and try
                 again.
               </Error>
