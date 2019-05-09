@@ -1,21 +1,87 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useState } from 'react';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import {
+  Layout,
+  PageWrapper,
+  Background,
+  Overlay,
+  ContentWrapper,
+  Content,
+  Title,
+  Paragraph,
+  NoLineBreak,
+  InputButtonWrapper,
+  Input,
+  Button,
+  Footer,
+  SocialLink,
+} from '../styles';
+import Image from '../images/bg.jpg';
+import Logo from '../components/Logo';
+import SEO from '../components/seo';
+import '../index.css';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const [email, setEmail] = useState('');
 
-export default IndexPage
+  const handleSubmit = event => {
+    event.preventDefault();
+    console.log(email);
+  };
+
+  return (
+    <Layout>
+      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <Background src={Image} alt="Background Image" />
+      <Overlay />
+      <PageWrapper>
+        <ContentWrapper>
+          <Logo />
+          <Content>
+            <Title>
+              <NoLineBreak>NO SWEAT.</NoLineBreak>
+              <NoLineBreak>NO STAIN.</NoLineBreak>
+              <NoLineBreak>NO SMELL.</NoLineBreak>
+            </Title>
+            <Paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor.
+            </Paragraph>
+            <InputButtonWrapper onSubmit={handleSubmit}>
+              <Input
+                type="email"
+                value={email}
+                onChange={event => setEmail(event.target.value)}
+                placeholder="Enter your email address"
+              />
+              <Button type="submit">NOTIFY ME</Button>
+            </InputButtonWrapper>
+          </Content>
+          <Footer>
+            <SocialLink
+              href="https://www.facebook.com/weartriad"
+              target="_blank"
+            >
+              facebook
+            </SocialLink>
+            <SocialLink
+              href="https://www.instagram.com/weartriad"
+              target="_blank"
+            >
+              instagram
+            </SocialLink>
+            <SocialLink
+              href="https://www.twitter.com/weartriad"
+              target="_blank"
+            >
+              twitter
+            </SocialLink>
+          </Footer>
+        </ContentWrapper>
+      </PageWrapper>
+    </Layout>
+  );
+};
+
+export default IndexPage;
