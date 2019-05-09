@@ -5,6 +5,7 @@ const mailChimpListID = process.env.MAILCHIMP_LIST_ID;
 const mcRegion = process.env.MAILCHIMP_REGION;
 
 module.exports.handler = (event, context, callback) => {
+  console.log(event.body);
   const formData = JSON.parse(event.body);
   const email = formData.email;
   let errorMessage = null;

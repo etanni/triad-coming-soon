@@ -27,24 +27,11 @@ const IndexPage = () => {
 
   const handleSubmit = async event => {
     event.preventDefault();
-    const uri = 'https://us20.api.mailchimp.com/3.0/lists/484ef15c47/members';
-    const API_KEY = process.env.MAILCHIMP_API_KEY;
-    const response = await axios.post(
-      uri,
-      {
-        email_address: email,
-        status: 'subscribed',
-      },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        auth: {
-          username: 'anystring',
-          password: API_KEY,
-        },
-      }
-    );
+    const uri =
+      'https://triad-coming-soon.netlify.com/.netlify/functions/signup';
+    const response = await axios.post(uri, {
+      email,
+    });
     console.log(response);
   };
 
