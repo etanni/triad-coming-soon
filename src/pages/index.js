@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 import {
   Layout,
@@ -24,9 +25,28 @@ import '../index.css';
 const IndexPage = () => {
   const [email, setEmail] = useState('');
 
-  const handleSubmit = event => {
+  const handleSubmit = async event => {
     event.preventDefault();
-    console.log(email);
+    const uri = 'https://us20.api.mailchimp.com/3.0/lists/484ef15c47/members';
+    const API_KEY = 'd4b7e4bd90cc6784fa41da6123fe3b2c-us20';
+    console.log(`Basic ${Buffer.from(`apikey:${API_KEY}`).toString('base64')}`);
+    const response = await axios.post(
+      uri,
+      {
+        email_address: email,
+        status: 'subscribed',
+      },
+      {
+        headers: {
+          Accept: 'application/json',
+          Authorization: `Basic ${Buffer.from(`apikey:${API_KEY}`).toString(
+            'base64'
+          )}`,
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+    );
+    console.log(response);
   };
 
   return (
