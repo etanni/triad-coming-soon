@@ -119,6 +119,7 @@ export const Input = styled.input`
   color: white;
   box-shadow: none;
   border: solid 2px #ffffff;
+  border-right: none;
   padding: 0 10px;
   @media (min-width: 500px) {
     padding: 0 20px;
@@ -137,7 +138,6 @@ export const Button = styled.button`
   color: #000;
   background-color: #fff;
   border: solid 2px #ffffff;
-  border-left: none;
   padding: 0;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -146,6 +146,7 @@ export const Button = styled.button`
   }
   &:hover {
     background: #000;
+    border-color: #000;
     color: #fff;
   }
 `;
