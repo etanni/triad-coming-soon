@@ -55,7 +55,7 @@ const IndexPage = () => {
           <Content>
             <Title>
               <NoLineBreak>NO SWEAT.</NoLineBreak>
-              <NoLineBreak>NO STAIN.</NoLineBreak>
+              <NoLineBreak>NO STAINS.</NoLineBreak>
               <NoLineBreak>NO SMELL.</NoLineBreak>
             </Title>
             <Paragraph>
