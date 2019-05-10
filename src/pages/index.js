@@ -32,8 +32,8 @@ const IndexPage = () => {
   const [error, setError] = useState(false);
 
   const handleSubmit = async event => {
-    if (!email) return;
     event.preventDefault();
+    if (!email) return;
     const uri =
       'https://triad-coming-soon.netlify.com/.netlify/functions/signup';
 
