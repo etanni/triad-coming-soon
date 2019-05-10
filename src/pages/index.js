@@ -27,6 +27,7 @@ import '../index.css';
 const IndexPage = () => {
   const [email, setEmail] = useState('');
   const [success, setSuccess] = useState(false);
+  const [pending, setPending] = useState(false);
   const [error, setError] = useState(false);
 
   const handleSubmit = async event => {
@@ -38,6 +39,7 @@ const IndexPage = () => {
     const response = await axios.post(uri, {
       email,
     });
+    if (response.data.status === 'pending') setPending(true);
     if (response.data.status === 'saved email') setSuccess(true);
     if (response.data.status !== 'saved email') setError(false);
   };
@@ -57,11 +59,9 @@ const IndexPage = () => {
               <NoLineBreak>NO SMELL.</NoLineBreak>
             </Title>
             <Paragraph>
-              We believe as a man, you should be confident in everything you do,
-              from pitching your latest idea to investors to wooing "the one" on
-              that first date to going for that extra rep to achieve a personal
-              best. When you put on your favorite Triad clothes, you'll feel
-              empowered to take on the day no matter what lies ahead.
+              Triad’s technology and materials are a remarkable engineering
+              achievement we've spent 10 years perfecting. A lifestyle brand for
+              people on the move.
             </Paragraph>
             <InputButtonWrapper onSubmit={handleSubmit}>
               <Input
@@ -74,6 +74,9 @@ const IndexPage = () => {
               <Success isSuccess={success}>
                 Success! You will be notified, as soon as we launch our product
                 line.
+              </Success>
+              <Success isSuccess={pending}>
+                We have sent you an email to confirm your subscription.
               </Success>
               <Error isError={error}>
                 Error! Something went wrong, please check your email address and

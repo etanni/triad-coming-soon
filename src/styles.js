@@ -82,6 +82,7 @@ export const Title = styled.h1`
   @media (min-width: 500px) {
     font-size: 43px;
     margin-bottom: 30px;
+    font-weight: bold;
   }
 `;
 
@@ -92,7 +93,7 @@ export const NoLineBreak = styled.span`
 export const Paragraph = styled.p`
   margin: 0;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.6;
