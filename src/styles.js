@@ -78,7 +78,7 @@ export const Title = styled.h1`
   line-height: 1.4;
   letter-spacing: 0.5px;
   margin-bottom: 20px;
-  max-width: 550px;
+  max-width: 600px;
   @media (min-width: 500px) {
     font-size: 43px;
     margin-bottom: 30px;
@@ -143,23 +143,14 @@ export const Button = styled.button`
   }
 `;
 
-export const Success = styled.span`
+export const Message = styled.span`
   position: absolute;
   top: 60px;
   font-size: 12px;
+  line-height: 1;
   display: block;
   opacity: ${({ isSuccess }) => (isSuccess ? 1 : 0)};
   transition: opacity 0.3s ease;
-`;
-export const Error = styled.span`
-  position: absolute;
-  top: 60px;
-  font-size: 12px;
-  display: block;
-  opacity: ${({ isError }) => (isError ? 1 : 0)};
-  transition: opacity 0.3s ease;
-  color: #fff;
-  line-height: 1;
 `;
 
 export const Footer = styled.div`

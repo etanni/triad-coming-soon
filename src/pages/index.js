@@ -16,8 +16,7 @@ import {
   Button,
   Footer,
   SocialLink,
-  Success,
-  Error,
+  Message,
 } from '../styles';
 import Image from '../images/bg.jpg';
 import Logo from '../components/Logo';
@@ -26,12 +25,15 @@ import '../index.css';
 
 const IndexPage = () => {
   const [email, setEmail] = useState('');
+  const [sending, setSending] = useState(false);
   const [success, setSuccess] = useState(false);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState(false);
 
   const handleSubmit = async event => {
     event.preventDefault();
+    setSending(true);
+    setPending(false);
     setSuccess(false);
     setError(false);
     const uri =
@@ -39,6 +41,7 @@ const IndexPage = () => {
     const response = await axios.post(uri, {
       email,
     });
+    setSending(false);
     if (response.data.status === 'pending') setPending(true);
     if (response.data.status === 'saved email') setSuccess(true);
     if (response.data.status !== 'saved email') setError(false);
@@ -70,18 +73,18 @@ const IndexPage = () => {
                 onChange={event => setEmail(event.target.value)}
                 placeholder="Enter your email address"
               />
-              <Button type="submit">NOTIFY ME</Button>
-              <Success isSuccess={success}>
+              <Button type="submit">{sending ? 'SENDING' : 'NOTIFY ME'}</Button>
+              <Message isSuccess={success}>
                 Success! You will be notified, as soon as we launch our product
                 line.
-              </Success>
-              <Success isSuccess={pending}>
+              </Message>
+              <Message isSuccess={pending}>
                 We have sent you an email to confirm your subscription.
-              </Success>
-              <Error isError={error}>
+              </Message>
+              <Message isError={error}>
                 Error! Something went wrong, please check your email address and
                 try again.
-              </Error>
+              </Message>
             </InputButtonWrapper>
           </Content>
           <Footer>
