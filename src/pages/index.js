@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 
 import {
   Layout,
@@ -99,20 +100,26 @@ const IndexPage = () => {
             <SocialLink
               href="https://www.facebook.com/weartriad"
               target="_blank"
+              rel="noopener,noreferrer"
+              title="Subscribe on Facebook"
             >
-              facebook
+              <FaFacebook size={32} />
             </SocialLink>
             <SocialLink
               href="https://www.instagram.com/weartriad"
               target="_blank"
+              rel="noopener,noreferrer"
+              title="Follow on Instagram"
             >
-              instagram
+              <FaInstagram size={32} />
             </SocialLink>
             <SocialLink
               href="https://www.twitter.com/weartriad"
               target="_blank"
+              rel="noopener,noreferrer"
+              title="Follow on Twitter"
             >
-              twitter
+              <FaTwitter size={32} />
             </SocialLink>
           </Footer>
         </ContentWrapper>

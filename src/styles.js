@@ -155,7 +155,6 @@ export const Message = styled.span`
 
 export const Footer = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   max-width: 350px;
 `;
@@ -167,6 +166,7 @@ export const SocialLink = styled.a`
   color: white;
   cursor: pointer;
   text-decoration: none;
+  margin-right: 24px;
 `;
 
 export const LogoWrapper = styled.div`
