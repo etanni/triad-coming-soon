@@ -107,7 +107,7 @@ export const InputButtonWrapper = styled.form`
   position: relative;
   width: 100%;
   max-width: 380px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 `;
 export const Input = styled.input`
   height: 54px;
@@ -174,6 +174,7 @@ export const SocialLink = styled.a`
   cursor: pointer;
   text-decoration: none;
   margin-right: 24px;
+  height: 32px;
 `;
 
 export const LogoWrapper = styled.div`
@@ -188,7 +189,7 @@ export const LogoWrapper = styled.div`
   @media (min-width: 1024px) {
     height: 115px;
     width: unset;
-    margin-bottom: 15vh;
+    margin-bottom: 10vh;
   }
   svg {
     position: absolute;
