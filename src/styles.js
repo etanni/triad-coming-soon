@@ -137,9 +137,16 @@ export const Button = styled.button`
   color: #000;
   background-color: #fff;
   border: solid 2px #ffffff;
+  border-left: none;
   padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
   @media (min-width: 500px) {
     width: 135px;
+  }
+  &:hover {
+    background: #000;
+    color: #fff;
   }
 `;
 
