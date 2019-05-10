@@ -73,7 +73,7 @@ const IndexPage = () => {
             </Title>
             <Paragraph>
               Triad’s technology and materials are a remarkable engineering
-              achievement we've spent 10 years perfecting. A Premium men's
+              achievement we've spent 10 years perfecting. Premium men's
               clothing engineered for confidence. A lifestyle brand for people
               on the move.
             </Paragraph>
