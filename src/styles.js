@@ -144,11 +144,11 @@ export const Button = styled.button`
 `;
 
 export const Message = styled.span`
+  display: block;
   position: absolute;
   top: 60px;
   font-size: 12px;
-  line-height: 1;
-  display: block;
+  line-height: 1.4;
   opacity: ${({ isSuccess }) => (isSuccess ? 1 : 0)};
   transition: opacity 0.3s ease;
 `;

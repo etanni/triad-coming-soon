@@ -32,19 +32,27 @@ const IndexPage = () => {
 
   const handleSubmit = async event => {
     event.preventDefault();
+    const uri =
+      'https://triad-coming-soon.netlify.com/.netlify/functions/signup';
+
     setSending(true);
     setPending(false);
     setSuccess(false);
     setError(false);
-    const uri =
-      'https://triad-coming-soon.netlify.com/.netlify/functions/signup';
-    const response = await axios.post(uri, {
-      email,
-    });
-    setSending(false);
-    if (response.data.status === 'pending') setPending(true);
-    if (response.data.status === 'saved email') setSuccess(true);
-    if (response.data.status !== 'saved email') setError(false);
+
+    try {
+      const response = await axios.post(uri, {
+        email,
+      });
+      setSending(false);
+      if (response.data.status === 'pending') setPending(true);
+      if (response.data.status === 'saved email') setSuccess(true);
+      if (response.data.status !== 'saved email') setError(true);
+    } catch (error) {
+      setSending(false);
+      console.log(error.errorMessage);
+      setError(true);
+    }
   };
 
   return (
@@ -81,7 +89,7 @@ const IndexPage = () => {
               <Message isSuccess={pending}>
                 We have sent you an email to confirm your subscription.
               </Message>
-              <Message isError={error}>
+              <Message isSuccess={error}>
                 Error! Something went wrong, please check your email address and
                 try again.
               </Message>
