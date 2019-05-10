@@ -57,9 +57,11 @@ const IndexPage = () => {
               <NoLineBreak>NO SMELL.</NoLineBreak>
             </Title>
             <Paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor.
+              We believe as a man, you should be confident in everything you do,
+              from pitching your latest idea to investors to wooing "the one" on
+              that first date to going for that extra rep to achieve a personal
+              best. When you put on your favorite Triad clothes, you'll feel
+              empowered to take on the day no matter what lies ahead.
             </Paragraph>
             <InputButtonWrapper onSubmit={handleSubmit}>
               <Input
