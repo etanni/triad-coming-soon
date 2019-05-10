@@ -75,12 +75,12 @@ export const Title = styled.h1`
   font-weight: 900;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.4;
+  line-height: 1.33;
   letter-spacing: 0.5px;
   margin-bottom: 20px;
   max-width: 600px;
   @media (min-width: 500px) {
-    font-size: 43px;
+    font-size: 40px;
     margin-bottom: 30px;
     font-weight: bold;
   }
