@@ -142,11 +142,12 @@ export const Input = styled.input`
   font-weight: 600;
   line-height: 24px;
   background-color: transparent;
-  color: white;
+  color: #ebebeb;
   box-shadow: none;
   border: solid 2px #ffffff;
   padding: 0 10px;
   border-radius: 0;
+  outline: none;
   @media (min-width: 768px) {
     border-right: none;
     padding: 0 20px;
@@ -167,6 +168,7 @@ export const Button = styled.button`
   border: solid 2px #ffffff;
   padding: 0;
   cursor: pointer;
+  outline: none;
   transition: all 0.3s ease;
   z-index: 1;
   @media (min-width: 768px) {
@@ -215,11 +217,15 @@ export const SocialLink = styled.a`
   margin-right: 36px;
   height: 36px;
   width: 36px;
-  background: white;
-  border-radius: 50%;
   &:last-of-type {
     margin-right: 0;
   }
+`;
+
+export const Icon = styled.img`
+  height: 36px;
+  width: 36px;
+  margin: 0;
 `;
 
 export const LogoWrapper = styled.div`
