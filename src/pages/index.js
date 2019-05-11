@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Img from 'gatsby-image';
 import { FaTwitter, FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 import {
