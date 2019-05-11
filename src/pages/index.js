@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Img from 'gatsby-image';
 import { FaTwitter, FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 import {
@@ -24,7 +25,11 @@ import Logo from '../components/Logo';
 import SEO from '../components/seo';
 import '../index.css';
 
-const IndexPage = () => {
+const IndexPage = ({
+  data: {
+    bg: { childImageSharp },
+  },
+}) => {
   const [email, setEmail] = useState('');
   const [sending, setSending] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -60,7 +65,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO />
-      <Background src={Image} alt="Background Image" />
+      <Background fluid={childImageSharp.fluid} alt="Background Image" />
       <Overlay />
       <PageWrapper>
         <ContentWrapper>
@@ -105,7 +110,7 @@ const IndexPage = () => {
               rel="noopener,noreferrer"
               title="Subscribe on Facebook"
             >
-              <FaFacebookF size={20} color="#222" />
+              <FaFacebookF size={20} color="#444" />
             </SocialLink>
             <SocialLink
               href="https://www.instagram.com/weartriad"
@@ -113,7 +118,7 @@ const IndexPage = () => {
               rel="noopener,noreferrer"
               title="Follow on Instagram"
             >
-              <FaInstagram size={20} color="#222" />
+              <FaInstagram size={20} color="#444" />
             </SocialLink>
             <SocialLink
               href="https://www.twitter.com/weartriad"
@@ -121,7 +126,7 @@ const IndexPage = () => {
               rel="noopener,noreferrer"
               title="Follow on Twitter"
             >
-              <FaTwitter size={20} color="#222" />
+              <FaTwitter size={20} color="#444" />
             </SocialLink>
           </Footer>
         </ContentWrapper>
@@ -131,3 +136,15 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const query = graphql`
+  query {
+    bg: file(relativePath: { eq: "bg.jpg" }) {
+      childImageSharp {
+        fluid(sizes: "100vh") {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+  }
+`;

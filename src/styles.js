@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import Img from 'gatsby-image';
 
 export const Layout = styled.div`
   width: 100vw;
@@ -24,16 +25,18 @@ export const Overlay = styled.div`
   }
 `;
 
-export const Background = styled.img`
-  position: absolute;
+export const Background = styled(Img)`
+  position: absolute !important;
   z-index: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right center;
   margin: 0;
-  @media (min-width: 768px) {
-    object-position: center center;
+  img {
+    object-position: right center !important;
+    @media (min-width: 768px) {
+      object-position: center center !important;
+    }
   }
 `;
 
