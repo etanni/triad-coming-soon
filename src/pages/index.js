@@ -19,7 +19,6 @@ import {
   SocialLink,
   Message,
 } from '../styles';
-import Image from '../images/bg.jpg';
 import Logo from '../components/Logo';
 import SEO from '../components/seo';
 import '../index.css';
