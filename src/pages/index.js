@@ -81,7 +81,7 @@ const IndexPage = ({
               on the move.
             </Paragraph>
             <InputButtonWrapper onSubmit={handleSubmit}>
-              <label htmlFor="email" style={{ display: 'none' }}>
+              <label htmlFor="email" style={{ width: '0', opacity: 0 }}>
                 Email
               </label>
               <Input
