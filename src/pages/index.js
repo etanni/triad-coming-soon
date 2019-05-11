@@ -105,7 +105,7 @@ const IndexPage = () => {
               rel="noopener,noreferrer"
               title="Subscribe on Facebook"
             >
-              <FaFacebookF size={24} color="#222" />
+              <FaFacebookF size={20} color="#222" />
             </SocialLink>
             <SocialLink
               href="https://www.instagram.com/weartriad"
@@ -113,7 +113,7 @@ const IndexPage = () => {
               rel="noopener,noreferrer"
               title="Follow on Instagram"
             >
-              <FaInstagram size={24} color="#222" />
+              <FaInstagram size={20} color="#222" />
             </SocialLink>
             <SocialLink
               href="https://www.twitter.com/weartriad"
@@ -121,7 +121,7 @@ const IndexPage = () => {
               rel="noopener,noreferrer"
               title="Follow on Twitter"
             >
-              <FaTwitter size={24} color="#222" />
+              <FaTwitter size={20} color="#222" />
             </SocialLink>
           </Footer>
         </ContentWrapper>
