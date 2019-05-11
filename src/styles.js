@@ -46,7 +46,7 @@ export const FillWrapper = styled.div`
 export const PageWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  padding: 20px;
+  padding: 20px 20px 80px;
   color: white;
   height: 100%;
   z-index: 55;
