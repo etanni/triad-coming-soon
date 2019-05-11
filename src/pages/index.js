@@ -38,8 +38,7 @@ const IndexPage = ({
   const handleSubmit = async event => {
     event.preventDefault();
     if (!email) return;
-    const uri =
-      'https://triad-coming-soon.netlify.com/.netlify/functions/signup';
+    const uri = 'https://weartriad.com/.netlify/functions/signup';
 
     setSending(true);
     setPending(false);
