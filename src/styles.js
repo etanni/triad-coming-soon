@@ -142,13 +142,26 @@ export const Input = styled.input`
   font-weight: 600;
   line-height: 24px;
   background-color: transparent;
-  color: #ebebeb;
+  color: #fff;
   box-shadow: none;
-  border: solid 2px #ffffff;
+  border: solid 2px #fff;
   padding: 0 10px;
   border-radius: 0;
+  &::placeholder {
+    color: #fff;
+    opacity: 1;
+  }
+  &:ms-placeholder {
+    color: #fff;
+    opacity: 1;
+  }
+  &::ms-placeholder {
+    color: #fff;
+    opacity: 1;
+  }
   @media (min-width: 768px) {
     border-right: none;
+    font-size: 15px;
     padding: 0 20px;
   }
 `;
