@@ -18,7 +18,7 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100%;
   background: #000;
-  opacity: 0.4;
+  opacity: 0.33;
   @media (min-width: 500px) {
     opacity: 0.33;
   }
@@ -30,8 +30,11 @@ export const Background = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: right center;
   margin: 0;
+  @media (min-width: 768px) {
+    object-position: center center;
+  }
 `;
 
 export const FillWrapper = styled.div`
@@ -47,11 +50,11 @@ export const PageWrapper = styled.div`
   color: white;
   height: 100%;
   z-index: 55;
-  @media (min-width: 500px) {
+  @media (min-width: 768px) {
     padding: 88px 88px 50px;
   }
   @media (min-width: 1024px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 600px 1fr;
   }
 `;
 
@@ -65,22 +68,30 @@ export const ContentWrapper = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
+  @media (min-width: 768px) {
+    align-items: flex-start;
+  }
 `;
 
 export const Title = styled.h1`
   display: flex;
   flex-wrap: wrap;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 900;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.33;
+  line-height: 1.75;
   letter-spacing: 0.5px;
-  margin-bottom: 20px;
-  max-width: 600px;
-  @media (min-width: 500px) {
+  margin-bottom: 10px;
+  max-width: 350px;
+  justify-content: center;
+  @media (min-width: 768px) {
+    max-width: 600px;
+    justify-content: flex-start;
     font-size: 40px;
+    line-height: 1.33;
     margin-bottom: 30px;
     font-weight: bold;
   }
@@ -92,22 +103,33 @@ export const NoLineBreak = styled.span`
 
 export const Paragraph = styled.p`
   margin: 0;
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 500;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.6;
+  line-height: 2;
   letter-spacing: 0.2px;
   margin-bottom: 80px;
-  max-width: 500px;
+  max-width: 400px;
+  text-align: center;
+  @media (min-width: 768px) {
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.6;
+    /* font-weight: 400; */
+  }
 `;
 
 export const InputButtonWrapper = styled.form`
   display: flex;
+  flex-direction: column;
   position: relative;
   width: 100%;
-  max-width: 380px;
+  max-width: 480px;
   margin-bottom: 40px;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 export const Input = styled.input`
   height: 54px;
@@ -119,15 +141,15 @@ export const Input = styled.input`
   color: white;
   box-shadow: none;
   border: solid 2px #ffffff;
-  border-right: none;
   padding: 0 10px;
-  @media (min-width: 500px) {
+  @media (min-width: 768px) {
+    border-right: none;
     padding: 0 20px;
   }
 `;
 export const Button = styled.button`
   height: 54px;
-  width: 115px;
+  width: 100%;
   font-size: 15px;
   font-weight: bold;
   font-style: normal;
@@ -141,7 +163,8 @@ export const Button = styled.button`
   padding: 0;
   cursor: pointer;
   transition: all 0.3s ease;
-  @media (min-width: 500px) {
+  z-index: 1;
+  @media (min-width: 768px) {
     width: 135px;
   }
   &:hover {
@@ -154,17 +177,24 @@ export const Button = styled.button`
 export const Message = styled.span`
   display: block;
   position: absolute;
-  top: 60px;
+  top: 116px;
   font-size: 12px;
   line-height: 1.4;
   opacity: ${({ isSuccess }) => (isSuccess ? 1 : 0)};
   transition: opacity 0.3s ease;
+  @media (min-width: 768px) {
+    top: 60px;
+  }
 `;
 
 export const Footer = styled.div`
   display: flex;
   align-items: center;
-  max-width: 350px;
+  justify-content: center;
+  width: 100%;
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
 `;
 
 export const SocialLink = styled.a`
@@ -172,19 +202,28 @@ export const SocialLink = styled.a`
   font-weight: bold;
   appearance: none;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   text-decoration: none;
-  margin-right: 24px;
-  height: 32px;
+  margin-right: 36px;
+  height: 36px;
+  width: 36px;
+  background: white;
+  border-radius: 50%;
+  &:last-of-type {
+    margin-right: 0;
+  }
 `;
 
 export const LogoWrapper = styled.div`
   width: 90%;
-  max-width: 500px;
+  max-width: 400px;
   position: relative;
   margin-bottom: 25vh;
   justify-self: center;
-  @media (min-width: 500px) {
+  @media (min-width: 768px) {
     justify-self: flex-start;
   }
   @media (min-width: 1024px) {
