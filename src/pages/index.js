@@ -82,8 +82,11 @@ const IndexPage = ({
               on the move.
             </Paragraph>
             <InputButtonWrapper onSubmit={handleSubmit}>
+              <label htmlFor="email" style={{ display: 'none' }} />
               <Input
                 type="email"
+                id="email"
+                name="email"
                 value={email}
                 onChange={event => setEmail(event.target.value)}
                 placeholder="Enter your email address"
