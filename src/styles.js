@@ -6,7 +6,7 @@ export const Layout = styled.div`
   flex-direction: column;
   min-height: 100vh;
   position: relative;
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     min-height: unset;
     height: 100vh;
   }
@@ -142,6 +142,7 @@ export const Input = styled.input`
   box-shadow: none;
   border: solid 2px #ffffff;
   padding: 0 10px;
+  border-radius: 0;
   @media (min-width: 768px) {
     border-right: none;
     padding: 0 20px;
