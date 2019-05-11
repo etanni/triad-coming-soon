@@ -147,7 +147,6 @@ export const Input = styled.input`
   border: solid 2px #ffffff;
   padding: 0 10px;
   border-radius: 0;
-  outline: none;
   @media (min-width: 768px) {
     border-right: none;
     padding: 0 20px;
@@ -168,7 +167,6 @@ export const Button = styled.button`
   border: solid 2px #ffffff;
   padding: 0;
   cursor: pointer;
-  outline: none;
   transition: all 0.3s ease;
   z-index: 1;
   @media (min-width: 768px) {
