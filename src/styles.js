@@ -46,7 +46,7 @@ export const FillWrapper = styled.div`
 export const PageWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  padding: 20px 20px 80px;
+  padding: 40px 20px 120px;
   color: white;
   height: 100%;
   z-index: 55;
@@ -60,9 +60,12 @@ export const PageWrapper = styled.div`
 
 export const ContentWrapper = styled.div`
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto auto;
   width: 100%;
   height: 100%;
+  @media (min-width: 768px) {
+    grid-template-rows: auto 1fr auto;
+  }
 `;
 
 export const Content = styled.div`
@@ -71,6 +74,7 @@ export const Content = styled.div`
   align-items: center;
   width: 100%;
   @media (min-width: 768px) {
+    justify-content: center;
     align-items: flex-start;
   }
 `;
@@ -109,7 +113,7 @@ export const Paragraph = styled.p`
   font-stretch: normal;
   line-height: 2;
   letter-spacing: 0.2px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   max-width: 400px;
   text-align: center;
   @media (min-width: 768px) {
@@ -126,7 +130,7 @@ export const InputButtonWrapper = styled.form`
   position: relative;
   width: 100%;
   max-width: 480px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   @media (min-width: 768px) {
     flex-direction: row;
   }
@@ -220,11 +224,12 @@ export const SocialLink = styled.a`
 
 export const LogoWrapper = styled.div`
   width: 90%;
-  max-width: 400px;
+  max-width: 200px;
   position: relative;
-  margin-bottom: 25vh;
+  margin-bottom: 15vh;
   justify-self: center;
   @media (min-width: 768px) {
+    max-width: 350px;
     justify-self: flex-start;
   }
   @media (min-width: 1024px) {
