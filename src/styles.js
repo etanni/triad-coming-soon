@@ -228,15 +228,11 @@ export const SocialLink = styled.a`
   margin-right: 36px;
   height: 36px;
   width: 36px;
+  background: white;
+  border-radius: 50%;
   &:last-of-type {
     margin-right: 0;
   }
-`;
-
-export const Icon = styled.img`
-  height: 36px;
-  width: 36px;
-  margin: 0;
 `;
 
 export const LogoWrapper = styled.div`
