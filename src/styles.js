@@ -18,9 +18,9 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100%;
   background: #000;
-  opacity: 0.33;
+  opacity: 0.15;
   @media (min-width: 500px) {
-    opacity: 0.33;
+    opacity: 0.15;
   }
 `;
 
