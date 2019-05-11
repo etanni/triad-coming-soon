@@ -11,7 +11,7 @@ import Helmet from 'react-helmet';
 
 function SEO({ lang = 'en', meta }) {
   const metaDescription =
-    'Triad is premium activewear fashion brand. It has the most advanced Tech on the market.';
+    "Premium men's clothing engineered for confidence. Triad’s technology and materials are a remarkable engineering achievement we've spent 10 years perfecting.";
   const title = 'Triad is coming soon | Made to be free';
   const keywords = [
     'fashion',
