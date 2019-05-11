@@ -7,9 +7,10 @@ export const Layout = styled.div`
   flex-direction: column;
   min-height: 100vh;
   position: relative;
+  overflow: scroll;
   @media (min-width: 768px) {
-    min-height: unset;
-    height: 100vh;
+    /* min-height: unset; */
+    /* height: 100vh; */
   }
 `;
 
@@ -49,7 +50,7 @@ export const FillWrapper = styled.div`
 export const PageWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  padding: 40px 20px 120px;
+  padding: 40px 20px 100px;
   color: white;
   height: 100%;
   z-index: 55;
@@ -77,7 +78,7 @@ export const Content = styled.div`
   align-items: center;
   width: 100%;
   @media (min-width: 768px) {
-    justify-content: center;
+    /* justify-content: flex-start; */
     align-items: flex-start;
   }
 `;
@@ -133,9 +134,10 @@ export const InputButtonWrapper = styled.form`
   position: relative;
   width: 100%;
   max-width: 480px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   @media (min-width: 768px) {
     flex-direction: row;
+    margin-bottom: 80px;
   }
 `;
 export const Input = styled.input`
@@ -242,7 +244,8 @@ export const LogoWrapper = styled.div`
   width: 90%;
   max-width: 200px;
   position: relative;
-  margin-bottom: 15vh;
+  /* height: 15vh; */
+  margin-bottom: 30px;
   justify-self: center;
   @media (min-width: 768px) {
     max-width: 350px;
@@ -251,10 +254,10 @@ export const LogoWrapper = styled.div`
   @media (min-width: 1024px) {
     height: 115px;
     width: unset;
-    margin-bottom: 10vh;
+    margin-bottom: 80px;
   }
   svg {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
