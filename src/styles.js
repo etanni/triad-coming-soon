@@ -19,11 +19,8 @@ export const Overlay = styled.div`
   z-index: 1;
   width: 100%;
   height: 100%;
-  background: #000;
-  opacity: 0.15;
-  @media (min-width: 500px) {
-    opacity: 0.15;
-  }
+  background: #fff;
+  opacity: 0.39;
 `;
 
 export const Background = styled(Img)`
@@ -34,10 +31,7 @@ export const Background = styled(Img)`
   object-fit: cover;
   margin: 0;
   img {
-    object-position: right center !important;
-    @media (min-width: 768px) {
-      object-position: center center !important;
-    }
+    object-position: center center !important;
   }
 `;
 
@@ -51,7 +45,7 @@ export const PageWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   padding: 40px 20px 100px;
-  color: white;
+  color: #000;
   height: 100%;
   z-index: 55;
   @media (min-width: 768px) {
@@ -80,6 +74,7 @@ export const Content = styled.div`
   @media (min-width: 768px) {
     /* justify-content: flex-start; */
     align-items: flex-start;
+    justify-content: flex-end;
   }
 `;
 
@@ -133,7 +128,7 @@ export const InputButtonWrapper = styled.form`
   flex-direction: column;
   position: relative;
   width: 100%;
-  max-width: 480px;
+  max-width: 400px;
   margin-bottom: 40px;
   @media (min-width: 768px) {
     flex-direction: row;
@@ -147,21 +142,21 @@ export const Input = styled.input`
   font-weight: 600;
   line-height: 24px;
   background-color: transparent;
-  color: #fff;
+  color: #000;
   box-shadow: none;
-  border: solid 2px #fff;
+  border: solid 2px #c10d28;
   padding: 0 10px;
   border-radius: 0;
   &::placeholder {
-    color: #fff;
+    color: #000;
     opacity: 1;
   }
   &:ms-placeholder {
-    color: #fff;
+    color: #000;
     opacity: 1;
   }
   &::ms-placeholder {
-    color: #fff;
+    color: #000;
     opacity: 1;
   }
   @media (min-width: 768px) {
@@ -180,9 +175,9 @@ export const Button = styled.button`
   line-height: 50px;
   text-align: center;
   letter-spacing: 0.2px;
-  color: #000;
-  background-color: #fff;
-  border: solid 2px #ffffff;
+  color: #fff;
+  background-color: #c10d28;
+  border: 0;
   padding: 0;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -193,7 +188,6 @@ export const Button = styled.button`
   &:hover {
     background: #000;
     border-color: #000;
-    color: #fff;
   }
 `;
 
@@ -233,7 +227,7 @@ export const SocialLink = styled.a`
   margin-right: 36px;
   height: 36px;
   width: 36px;
-  background: white;
+  background: #000;
   border-radius: 50%;
   &:last-of-type {
     margin-right: 0;
@@ -252,7 +246,7 @@ export const LogoWrapper = styled.div`
     justify-self: flex-start;
   }
   @media (min-width: 1024px) {
-    height: 115px;
+    height: 105px;
     width: unset;
     margin-bottom: 80px;
   }
