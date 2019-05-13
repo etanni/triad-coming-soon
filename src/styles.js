@@ -20,7 +20,10 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100%;
   background: #fff;
-  opacity: 0.39;
+  opacity: 0.71;
+  @media (min-width: 768px) {
+    opacity: 0.39;
+  }
 `;
 
 export const Background = styled(Img)`
@@ -60,7 +63,6 @@ export const ContentWrapper = styled.div`
   display: grid;
   grid-template-rows: auto auto auto;
   width: 100%;
-  height: 100%;
   @media (min-width: 768px) {
     grid-template-rows: auto 1fr auto;
   }
