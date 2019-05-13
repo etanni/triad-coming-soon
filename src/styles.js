@@ -46,7 +46,7 @@ export const PageWrapper = styled.div`
   grid-template-columns: 1fr;
   padding: 40px 20px 100px;
   color: #000;
-  height: 100%;
+  min-height: 100vh;
   z-index: 55;
   @media (min-width: 768px) {
     padding: 88px 88px 50px;
