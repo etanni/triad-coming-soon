@@ -62,7 +62,7 @@ const IndexPage = ({
 
   return (
     <Layout>
-      <SEO image={childImageSharp.original.src} />
+      <SEO image={childImageSharp.fluid.src} />
       <Background fluid={childImageSharp.fluid} alt="Background Image" />
       <Overlay />
       <PageWrapper>
