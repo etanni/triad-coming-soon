@@ -11,7 +11,7 @@ import Helmet from 'react-helmet';
 
 function SEO({ lang = 'en', meta }) {
   const metaDescription =
-    "Premium men's clothing engineered for confidence. Triad’s technology and materials are a remarkable engineering achievement we've spent 10 years perfecting.";
+    'Introducing Triad: A breakthrough in premium men’s clothing. Engineered for confidence with the first no sweat, no stain, no stink proprietary technology. Revolutionary performance that changes the game. Made to be free. #weartriad';
   const title = 'Triad is coming soon | Made to be free';
   const keywords = [
     'fashion',
