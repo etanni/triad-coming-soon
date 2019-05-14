@@ -9,7 +9,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-function SEO({ lang = 'en', meta }) {
+function SEO({ lang = 'en', meta, image }) {
   const metaDescription =
     'Introducing Triad: A breakthrough in premium men’s clothing. Engineered for confidence with the first no sweat, no stain, no stink proprietary technology. Revolutionary performance that changes the game. Made to be free. #weartriad';
   const title = 'Triad is coming soon | Made to be free';
@@ -40,6 +40,10 @@ function SEO({ lang = 'en', meta }) {
         {
           property: `og:title`,
           content: title,
+        },
+        {
+          property: `og:image`,
+          content: image,
         },
         {
           property: `og:description`,
