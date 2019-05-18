@@ -75,10 +75,12 @@ const IndexPage = ({
               <NoLineBreak>NO SMELL.</NoLineBreak>
             </Title>
             <Paragraph>
-              Introducing Triad: A breakthrough in premium men’s clothing.
-              Engineered for confidence with the first no sweat, no stain, no
-              stink proprietary technology. Revolutionary performance that
-              changes the game. Made to be free. #weartriad
+              Introducing Triad: premium men's clothing engineered for
+              confidence with the first no sweat, no stain, no stink technology.
+              Revolutionary technology with uncompromising style.
+              <br />
+              <br />
+              Made to be free. #weartriad
             </Paragraph>
             <InputButtonWrapper onSubmit={handleSubmit}>
               <label
