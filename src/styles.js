@@ -276,7 +276,7 @@ export const TrustedTitle = styled.div`
   display: block;
   font-size: 30px;
   line-height: 40px;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   text-align: center;
   font-weight: 900;
 `;
