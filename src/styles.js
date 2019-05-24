@@ -289,11 +289,22 @@ export const TrustedIcons = styled.div`
 
 export const Icon = styled.div`
   color: black;
-  width: calc(100% / 3);
+  width: calc(100% / 2);
+  padding: 8px 48px;
+  @media (min-width: 520px) {
+    width: calc(100% / 3);
+    padding: 8px 56px;
+  }
   @media (min-width: 768px) {
     width: calc(100% / 4);
+    padding: 8px 64px;
+  }
+  @media (min-width: 860px) {
+    width: calc(100% / 4);
+    padding: 8px 80px;
   }
   @media (min-width: 1024px) {
     width: calc(100% / 6);
+    padding: 8px 64px;
   }
 `;
