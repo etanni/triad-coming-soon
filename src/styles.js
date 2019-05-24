@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import Img from 'gatsby-image';
 
-export const Layout = styled.div`
+export const InitialLayout = styled.div`
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -261,5 +261,39 @@ export const LogoWrapper = styled.div`
       height: 100%;
       width: unset;
     }
+  }
+`;
+
+export const Trusted = styled.div`
+  width: 100%;
+  padding: 80px 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+`;
+
+export const TrustedTitle = styled.div`
+  display: block;
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: bold;
+`;
+
+export const TrustedIcons = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+export const Icon = styled.div`
+  color: black;
+  width: calc(100% / 3);
+  @media (min-width: 768px) {
+    width: calc(100% / 4);
+  }
+  @media (min-width: 1024px) {
+    width: calc(100% / 6);
   }
 `;
