@@ -159,7 +159,7 @@ const IndexPage = ({
         </PageWrapper>
       </InitialLayout>
       <Trusted>
-        <TrustedTitle>Trusted By</TrustedTitle>
+        <TrustedTitle>TRUSTED BY</TrustedTitle>
         <TrustedIcons>
           <NFL />
           <Porsche />
