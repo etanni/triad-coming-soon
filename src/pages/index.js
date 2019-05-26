@@ -185,7 +185,7 @@ export const query = graphql`
   query {
     bg: file(relativePath: { eq: "bg.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
+        fluid(maxWidth: 1600, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
