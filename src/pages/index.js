@@ -131,7 +131,7 @@ const IndexPage = ({
             </Content>
             <Footer>
               <SocialLink
-                href="https://www.facebook.com/weartriad"
+                href="https://www.facebook.com/triadbrand"
                 target="_blank"
                 rel="noopener,noreferrer"
                 title="Subscribe on Facebook"
@@ -139,7 +139,7 @@ const IndexPage = ({
                 <FaFacebookF size={20} color="#fff" />
               </SocialLink>
               <SocialLink
-                href="https://www.instagram.com/weartriad"
+                href="https://www.instagram.com/triadbrand"
                 target="_blank"
                 rel="noopener,noreferrer"
                 title="Follow on Instagram"
@@ -147,7 +147,7 @@ const IndexPage = ({
                 <FaInstagram size={20} color="#fff" />
               </SocialLink>
               <SocialLink
-                href="https://www.twitter.com/weartriad"
+                href="https://www.twitter.com/triadbrand"
                 target="_blank"
                 rel="noopener,noreferrer"
                 title="Follow on Twitter"
