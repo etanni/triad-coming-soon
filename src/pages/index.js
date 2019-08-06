@@ -139,7 +139,7 @@ const IndexPage = ({
                 <FaFacebookF size={20} color="#fff" />
               </SocialLink>
               <SocialLink
-                href="https://www.instagram.com/triadbrand"
+                href="https://www.instagram.com/wear_triad"
                 target="_blank"
                 rel="noopener,noreferrer"
                 title="Follow on Instagram"
