@@ -45,10 +45,16 @@ module.exports.handler = (event, context, callback) => {
       headers: {
         Authorization: `apikey ${mailChimpAPI}`,
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+        'Access-Control-Allow-Methods': '*',
+        'Access-Control-Max-Age': '2592000',
+        'Access-Control-Allow-Credentials': 'true',
       },
     },
     (error, response, body) => {
       if (error) {
+        console.log("Error submitting", error)
         callback(error, null);
       }
       const bodyObj = JSON.parse(body);
