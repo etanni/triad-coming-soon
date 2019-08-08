@@ -37,7 +37,7 @@ module.exports = {
     app.use(
       '/.netlify/functions/',
       proxy({
-        target: 'https://triad-coming-soon.netlify.com/.netlify/functions/',
+        target: 'https://weartriad.com/.netlify/functions/',
         secure: false,
         pathRewrite: {
           '/.netlify/functions/': '',
