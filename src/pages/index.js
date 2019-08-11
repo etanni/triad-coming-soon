@@ -53,7 +53,7 @@ const IndexPage = ({
   const handleSubmit = async event => {
     event.preventDefault();
     if (!email) return;
-    const uri = 'https://weartriad.com/.netlify/functions/signup';
+    const uri = 'https://www.weartriad.com/.netlify/functions/signup';
 
     setSending(true);
     setPending(false);
@@ -131,7 +131,7 @@ const IndexPage = ({
             </Content>
             <Footer>
               <SocialLink
-                href="https://www.facebook.com/triadbrand"
+                href="https://www.facebook.com/triadzero"
                 target="_blank"
                 rel="noopener,noreferrer"
                 title="Subscribe on Facebook"
@@ -139,7 +139,7 @@ const IndexPage = ({
                 <FaFacebookF size={20} color="#fff" />
               </SocialLink>
               <SocialLink
-                href="https://www.instagram.com/wear_triad"
+                href="https://www.instagram.com/triadmen"
                 target="_blank"
                 rel="noopener,noreferrer"
                 title="Follow on Instagram"
@@ -147,7 +147,7 @@ const IndexPage = ({
                 <FaInstagram size={20} color="#fff" />
               </SocialLink>
               <SocialLink
-                href="https://www.twitter.com/triadbrand"
+                href="https://www.twitter.com/triadmen"
                 target="_blank"
                 rel="noopener,noreferrer"
                 title="Follow on Twitter"
